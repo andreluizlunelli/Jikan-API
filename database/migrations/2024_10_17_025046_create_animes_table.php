@@ -11,19 +11,19 @@ return new class extends Migration
         Schema::create('animes', function (Blueprint $table) {
             $table->id();
             $table->integer('mal_id');
-            $table->string('url');
-            $table->string('title');
-            $table->string('type');
-            $table->string('source');
-            $table->string('status');
-            $table->integer('episodes');
-            $table->string('duration');
-            $table->string('rating');
-            $table->float('score');
-            $table->integer('popularity');
-            $table->dateTimeTz('aired_from');
-            $table->dateTimeTz('aired_to');
-            $table->text('synopsis');
+            $table->string('url')->nullable();
+            $table->string('title')->nullable();
+            $table->string('type')->nullable();
+            $table->string('source')->nullable();
+            $table->string('status')->nullable();
+            $table->integer('episodes')->nullable();
+            $table->string('duration')->nullable();
+            $table->string('rating')->nullable();
+            $table->float('score')->nullable();
+            $table->integer('popularity')->nullable();
+            $table->dateTimeTz('aired_from')->nullable();
+            $table->dateTimeTz('aired_to')->nullable();
+            $table->text('synopsis')->nullable();
             $table->timestamps();
         });
     }

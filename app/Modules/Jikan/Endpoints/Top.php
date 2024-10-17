@@ -10,10 +10,10 @@ class Top
     public function __construct(readonly private JikanService $service)
     {}
 
-    public function animes(): array
+    public function animes(array $query = []): array
     {
         return Http::baseUrl($this->service->baseUrl)
-            ->get('/top/anime')
+            ->get('/top/anime', $query)
             ->json();
     }
 }
