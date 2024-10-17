@@ -6,12 +6,12 @@ Since consume APIs with Laravel is not trivial, this repo aims to provide an ove
 
 ## Topics
 
-- [Batch Pagination Example](#)
+- [Batch Pagination Example](./app/Modules/Jikan/Jobs/TopAnime.php)
   - Cookbook
     - [Endpoints](./app/Modules/Jikan/Endpoints)
     - [Service](./app/Modules/Jikan/JikanService)
     - [Facade](./app/Modules/Jikan/JikanFacade)
-    - [Jobs/Batch](./app/Modules/Jikan/Jobs/TopAnime.php)
+    - [Jobs/Batch](./app/Modules/Jikan/Jobs)
     - [Command](#)
 
 ## Resources
