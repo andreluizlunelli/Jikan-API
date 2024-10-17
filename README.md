@@ -6,7 +6,13 @@ Since consume APIs with Laravel is not trivial, this repo aims to provide an ove
 
 ## Topics
 
-- [Batch Pagination Example](#void)
+- [Batch Pagination Example](#)
+  - Cookbook
+    - [Endpoints](#)
+    - [Service](#)
+    - [Facade](#)
+    - [Jobs/Batch](#)
+    - [Command](#)
 
 ## Resources
 
