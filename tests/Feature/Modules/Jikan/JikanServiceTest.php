@@ -2,8 +2,7 @@
 
 declare(strict_types=1);
 
-use App\Modules\Jikan\JikanService;
-use Illuminate\Support\Facades\Http;
+use App\Modules\Jikan\JikanFacade;
 
 describe('Jikan Module', function () {
    it('should be able to get top anime', function () {
@@ -15,13 +14,11 @@ describe('Jikan Module', function () {
            ]
        ];
 
-       Http::fake([
-           '*/v4/top/anime' => Http::response($data)
-       ]);
+       JikanFacade::shouldReceive('top->animes')
+           ->once()
+           ->andReturn($data);
 
-       $service = new JikanService();
-
-       $response = $service->top()->animes();
+       $response = JikanFacade::top()->animes();
 
        expect($response)->toBe($data);
    });
